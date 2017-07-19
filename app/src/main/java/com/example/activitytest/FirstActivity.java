@@ -17,12 +17,17 @@ public class FirstActivity extends AppCompatActivity {
 
     private Button btn1;
 
+    private MyHandler myHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
 
         context = this;
+
+        myHandler=new MyHandler();
+
         initUI();
         initListener();
     }
