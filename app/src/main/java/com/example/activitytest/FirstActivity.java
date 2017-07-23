@@ -2,6 +2,7 @@ package com.example.activitytest;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+
+
+import com.example.activitytest.bluetoothtest.BluetoothTest;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -61,6 +66,11 @@ public class FirstActivity extends AppCompatActivity {
             case R.id.remove_item:
                 Toast.makeText(context,"You click Remove !",Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.bluetoothTest:
+                Intent intent=new Intent(context, BluetoothTest.class);
+                context.startActivity(intent);
+                break;
+
             default:
         }
 
